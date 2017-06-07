@@ -3,13 +3,15 @@
 const config = require('config');
 const express = require('express');
 const compression = require('compression');
+const responseTime = require('response-time');
 
 const app = express();
 
 app
   .disable('x-powered-by')
   .disable('etag')
-  .use(compression());
+  .use(compression())
+  .use(responseTime());
 
 app
   .use('/images', require('./routers/index'));
