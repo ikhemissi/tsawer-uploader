@@ -14,4 +14,12 @@ module.exports = {
     bucketName: 'images',
     bucketRegion: 'us-east-1',
   },
+  database: {
+    host: '127.0.0.1',
+    port: 15984,
+    protocol: 'http',
+    username: 'root',
+    password: 'dbi4eieh',
+    name: 'images',
+  },
 };
